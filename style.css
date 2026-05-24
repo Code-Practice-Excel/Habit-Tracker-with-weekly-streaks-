@@ -1,0 +1,99 @@
+/* Simple Layout Setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; color: #1e293b; }
+header p { color: #64748b; margin: 5px 0 20px 0; }
+
+.navigation { display: flex; gap: 10px; margin-bottom: 10px; }
+.week-label { font-weight: bold; margin-bottom: 20px; color: #334155; }
+
+/* Buttons */
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #cbd5e1;
+    color: #1e293b;
+    font-weight: bold;
+}
+button:hover { background-color: #94a3b8; }
+.blue-btn { background-color: #3b82f6; color: white; }
+.blue-btn:hover { background-color: #2563eb; }
+.green-btn { background-color: #10b981; color: white; }
+.green-btn:hover { background-color: #059669; }
+
+.add-form { display: flex; gap: 10px; margin-bottom: 20px; }
+.add-form input { flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; }
+
+/* The 9-Column Habit Layout Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 140px repeat(7, minmax(45px, 1fr)) 70px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cell {
+    padding: 10px 5px;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.header-cell { background-color: #f1f5f9; font-weight: bold; color: #475569; }
+
+/* Highlighting Today */
+.today-cell { background-color: #eff6ff; }
+.today-header { background-color: #bfdbfe !important; color: #1e40af; }
+
+/* Habit Action Cells */
+.habit-name { justify-content: space-between; padding-left: 10px; font-weight: 500; }
+.rename-btn { background: none; color: #3b82f6; font-size: 11px; padding: 2px; }
+.delete-btn { background: none; color: #ef4444; font-size: 11px; padding: 2px; }
+
+/* Interactive Checkboxes */
+.checkbox {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #cbd5e1;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+.checkbox.checked { background-color: #10b981; border-color: #10b981; position: relative; }
+.checkbox.checked::after { content: "✓"; color: white; font-weight: bold; position: absolute; top: 2px; left: 6px; }
+.checkbox:disabled { background-color: #e2e8f0; cursor: not-allowed; opacity: 0.5; }
+
+.streak-cell { font-weight: bold; color: #c2410c; background-color: #fff7ed; }
+
+/* Empty Screen Area Layout */
+.empty-screen { text-align: center; padding: 40px; color: #64748b; }
+.seed-icon { font-size: 40px; }
+
+/* Mobile View Responsiveness */
+@media (max-width: 600px) {
+    .container { padding: 10px; }
+    .grid-container { grid-template-columns: 100px repeat(7, 40px) 50px; overflow-x: auto; }
+}
+
