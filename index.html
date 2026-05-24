@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My  Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="box">
+        <header>
+            <h1>Daily Habit Tracker</h1>
+            <p>Track your goals day by day.</p>
+        </header>
+
+        <!-- Week Switching Buttons -->
+        <div class="navigation">
+            <button id="prevBtn">⬅️ Previous Week</button>
+            <button id="currentBtn" class="blue-btn">This Week</button>
+            <button id="nextBtn">Next Week ➡️</button>
+        </div>
+        <div id="weekLabel" class="week-label">Loading dates...</div>
+
+        <!-- Form to Add a Habit -->
+        <form id="addForm" class="add-form">
+            <input type="text" id="habitInput" placeholder="Type a habit (e.g., Read, Gym)..." required>
+            <button type="submit" class="green-btn">Add Habit</button>
+        </form>
+
+        <!-- The Table Grid -->
+        <div class="grid-container" id="gridBox">
+            <!-- JavaScript will draw the grid here -->
+        </div>
+
+        <!-- Screen shown when there are no habits -->
+        <div id="noHabitsBox" class="empty-screen">
+            <h3>Your tracker is empty!</h3>
+            <p>Type a habit in the box above to start tracking your week.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
