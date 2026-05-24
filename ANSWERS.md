@@ -2,7 +2,7 @@
 
 ### 1. How to run
 *  Double-click the file named `index.html` to run.
-* **Live Link:** (Paste your GitHub Pages live link here once generated!)
+
 
 ### 2. Stack & design choices
 * **Stack choice:** used standard HTML, CSS, and basic JavaScript instead of a complex framework. As a beginner, using vanilla code allows me to understand exactly how the DOM tree works
